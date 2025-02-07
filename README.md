@@ -4,6 +4,6 @@ My configuration for emacs.
 
 Info:
 My config has plugins for convenient work with c++ and... RPC to Discord!
-![2 Screen](https://github.com/wholos/emacs-config/blob/main/emacrpc.png)
+![2 Screen](https://github.com/wholos/emacs-config/blob/main/emacrps.png)
 
 UPD: No
