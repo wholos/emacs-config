@@ -7,4 +7,4 @@ My config has plugins for convenient work with c++ and... RPC to Discord!
 
 ![2 Screen](https://github.com/wholos/emacs-config/blob/main/emacrps.png)
 
-UPD: No
+UPD: 07.03.25 - Changed family font
