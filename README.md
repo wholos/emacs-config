@@ -14,4 +14,3 @@ UPD:
 07.03.25 - Add new theme
 11.03.25 - Added Rust-Python-Go-Luarocks support
 11.03.25 - Added WakaTime
-11.03.25 - Add new icons
