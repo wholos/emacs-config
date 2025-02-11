@@ -9,9 +9,6 @@
 ;; Theme
 (use-package timu-spacegrey-theme
   :ensure t)
-;; Icons
-(use-package nerd-icons
-  :ensure t
 ;; Languages config
 (use-package rust-mode
   :ensure t)
