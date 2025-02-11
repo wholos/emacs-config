@@ -6,25 +6,63 @@
 ;; and `package-pinned-packages`. Most users will not need or want to do this.
 ;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
+;; Theme
+(use-package timu-spacegrey-theme
+  :ensure t)
+;; Icons
+(use-package nerd-icons
+  :ensure t
+;; Languages config
+(use-package rust-mode
+  :ensure t)
+
+(use-package python-mode
+  :ensure t)
+
+(use-package go-mode
+  :ensure t)
+
+(use-package lua-mode
+  :ensure t)
+
+(use-package luarocks
+  :ensure t)
+;; WakaTime Config
+(use-package wakatime-mode
+  :ensure t)
+;; LSP Configuration
 (use-package lsp-mode
   :ensure t
   :hook (c++-mode . lsp))
 
+;; LSP-Ui Configuration
 (use-package lsp-ui
   :ensure t
   :after lsp-mode
   :custom
   (lsp-ui-doc-show-with-cursor t))
 
+;; Company config
 (use-package company
   :ensure t
   :init
   (add-hook 'after-init-hook 'global-company-mode))
 
+;; FlyCheck config
 (use-package flycheck
   :ensure t
   :init (global-flycheck-mode))
 
+;; Tree-Sitter
+(use-package tree-sitter
+  :ensure t)
+
+(use-package tree-sitter-langs
+  :ensure t
+  :hook
+  (c-mode . tree-sitter-hl-mode))
+
+;; Consult binds
 (use-package consult
   :ensure t
   ;; Replace bindings. Lazily loaded by `use-package'.
@@ -128,11 +166,13 @@
   ;; (keymap-set consult-narrow-map (concat consult-narrow-key " ?") #'consult-narrow-help)
 )
 
+;; Vertico bind
 (use-package vertico
   :ensure t
   :init
   (vertico-mode))
 
+;; Orderless config
 (use-package orderless
   :ensure t
   :custom
@@ -152,17 +192,19 @@
    '("15466a777080bcd4f71fea193fd7e4988552919c0e8a09621883aa19166b5099" "b9f44212b4be6f0466811c5d8a297dda3c40dbf4c4cfd97c1686fceb2043b617" "7fac152a13c430ee81f0fed959305e3331a6355765b3ae825006933b9ec36861" default))
  '(global-display-line-numbers-mode t)
  '(global-tab-line-mode t)
+ '(global-wakatime-mode t)
  '(menu-bar-mode nil)
  '(package-selected-packages
-   '(timu-spacegrey-theme use-package flycheck company orderless vertico consult luarocks lua-mode lsp-ui lsp-mode elcord))
+   '(rust-mode python-mode go-mode python wakatime-mode timu-spacegrey-theme use-package flycheck company orderless vertico consult luarocks lua-mode lsp-ui lsp-mode elcord))
  '(recentf-mode t)
  '(scroll-bar-mode nil)
  '(tab-width 4)
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(wakatime-api-key "ENTER YOU API KEY"))
+  (add-to-list 'default-frame-alist '(font . "JetBrains Mono"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
- (add-to-list 'default-frame-alist '(font . "JetBrains Mono"))
