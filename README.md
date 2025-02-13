@@ -19,3 +19,5 @@ UPD:
 11.03.25 - Added Rust-Python-Go-Luarocks support
 
 11.03.25 - Added WakaTime
+
+13.03.25 - Added Cargo, Rust-Analyzer support
