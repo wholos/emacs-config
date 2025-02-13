@@ -8,6 +8,7 @@ My config has plugins for convenient work with C++, Rust and... RPC to Discord!
 ![2 Screen](https://github.com/wholos/emacs-config/blob/main/emacrps.png)
 
 How to install:
+
 git clone https://github.com/wholos/emacs-config
 copy init.el and paste to /.emacs.d/
 start emacs
