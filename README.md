@@ -10,12 +10,19 @@ My config has plugins for convenient work with C++, Rust and... RPC to Discord!
 How to install:
 
 git clone https://github.com/wholos/emacs-config
+
 copy init.el and paste to /.emacs.d/
+
 start emacs
+
 press Alt-X
+
 wrote "list-packages"
+
 install use-package, elcord
+
 restart emacs
+
 finished!!!
 
 UPD:
