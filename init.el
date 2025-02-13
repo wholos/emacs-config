@@ -9,10 +9,31 @@
 ;; Theme
 (use-package timu-spacegrey-theme
   :ensure t)
-;; Languages config
-(use-package rust-mode
+;; Install cargo, rust, rust-analyzer in terminal!
+;; Rust config
+(use-package cargo
   :ensure t)
 
+(use-package cargo-mode
+  :ensure t
+  :hook
+  (rust-mode . cargo-minor-mode)
+  :config
+  (setq compilation-scroll-output t))
+
+(use-package rustic
+  :ensure t
+  :config
+  (setq rustic-format-on-save nil)
+  :custom
+  (rustic-cargo-use-last-stored-arguments t))
+
+(use-package rust-mode
+  :ensure t
+  :init
+  (add-hook 'rust-mode-hook #'lsp))
+
+;; Languages config
 (use-package python-mode
   :ensure t)
 
@@ -24,6 +45,7 @@
 
 (use-package luarocks
   :ensure t)
+;; Install python-pip, wakatime-cli, wakatime in terminal!
 ;; WakaTime Config
 (use-package wakatime-mode
   :ensure t)
@@ -197,7 +219,7 @@
  '(scroll-bar-mode nil)
  '(tab-width 4)
  '(tool-bar-mode nil)
- '(wakatime-api-key "ENTER YOU API KEY"))
+ '(wakatime-api-key "YOUR API KEY"))
   (add-to-list 'default-frame-alist '(font . "JetBrains Mono"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
