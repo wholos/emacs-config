@@ -9,7 +9,27 @@
 ;; Theme
 (use-package timu-spacegrey-theme
   :ensure t)
-;; Install cargo, rust, rust-analyzer in terminal!
+;; Icons
+(use-package all-the-icons
+  :ensure t
+  :if (display-graphic-p))
+
+(use-package all-the-icons-completion
+  :ensure t
+  :defer
+  :hook (marginalia-mode . #'all-the-icons-completion-marginalia-setup)
+  :init
+  (all-the-icons-completion-mode))
+;; Startup dashboard
+(use-package dashboard
+  :ensure t
+  :config
+  (dashboard-setup-startup-hook))
+;; Line config
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1)
+  :custom ((doom-modeline-height 15)))
 ;; Rust config
 (use-package cargo
   :ensure t)
@@ -45,7 +65,6 @@
 
 (use-package luarocks
   :ensure t)
-;; Install python-pip, wakatime-cli, wakatime in terminal!
 ;; WakaTime Config
 (use-package wakatime-mode
   :ensure t)
