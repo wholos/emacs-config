@@ -3,7 +3,7 @@ My configuration for emacs.
 ![1 Screen](https://github.com/wholos/emacs-config/blob/main/emacs.png)
 
 Info:
-My config has plugins for convenient work with C++, Rust and... RPC to Discord!
+My config has plugins for convenient work with C, C++, Rust, Asm and... RPC to Discord!
 
 ![2 Screen](https://github.com/wholos/emacs-config/blob/main/emacrps.png)
 
@@ -32,3 +32,7 @@ UPD:
 11.03.25 - Added WakaTime
 
 13.03.25 - Added Cargo, Rust-Analyzer support
+
+22.03.25 - Added C support
+
+22.03.25 - Added Asm-Nasm support
