@@ -65,6 +65,15 @@
 
 (use-package luarocks
   :ensure t)
+
+(use-package cc-mode
+  :ensure t)
+
+(use-package iasm-mode
+  :ensure t)
+
+(use-package nasm-mode
+  :ensure t)
 ;; WakaTime Config
 (use-package wakatime-mode
   :ensure t)
@@ -238,7 +247,7 @@
  '(scroll-bar-mode nil)
  '(tab-width 4)
  '(tool-bar-mode nil)
- '(wakatime-api-key "YOUR API KEY"))
+ '(wakatime-api-key "YOUR  API KEY"))
   (add-to-list 'default-frame-alist '(font . "JetBrains Mono"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
