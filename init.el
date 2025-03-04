@@ -30,6 +30,18 @@
   :ensure t
   :init (doom-modeline-mode 1)
   :custom ((doom-modeline-height 15)))
+;; Customize tabs
+(use-package centaur-tabs
+  :demand
+  :config
+  (centaur-tabs-mode t)
+  (setq centaur-tabs-style "rounded")
+  (setq centaur-tabs-height 15)
+  (setq centaur-tabs-set-icons t)
+  (setq centaur-tabs-icon-type 'all-the-icons)
+  :bind
+  ("C-<prior>" . centaur-tabs-backward)
+  ("C-<next>" . centaur-tabs-forward))
 ;; Rust config
 (use-package cargo
   :ensure t)
@@ -238,7 +250,7 @@
  '(custom-safe-themes
    '("15466a777080bcd4f71fea193fd7e4988552919c0e8a09621883aa19166b5099" "b9f44212b4be6f0466811c5d8a297dda3c40dbf4c4cfd97c1686fceb2043b617" "7fac152a13c430ee81f0fed959305e3331a6355765b3ae825006933b9ec36861" default))
  '(global-display-line-numbers-mode t)
- '(global-tab-line-mode t)
+ '(global-tab-line-mode nil)
  '(global-wakatime-mode t)
  '(menu-bar-mode nil)
  '(package-selected-packages
