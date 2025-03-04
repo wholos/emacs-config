@@ -1,6 +1,6 @@
 # emacs-config
 My configuration for emacs.
-![1 Screen](https://github.com/wholos/emacs-config/blob/main/emacs.png)
+![1 Screen](https://github.com/wholos/emacs-config/blob/main/-1741105673.png)
 
 Info:
 My config has plugins for convenient work with C, C++, Rust, Asm and... RPC to Discord!
