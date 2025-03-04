@@ -36,3 +36,5 @@ UPD:
 22.03.25 - Added C support
 
 22.03.25 - Added Asm-Nasm support
+
+04.04.25 - Added customize tab
