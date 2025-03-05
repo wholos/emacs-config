@@ -45,3 +45,7 @@ UPD:
 22.03.25 - Added Asm-Nasm support
 
 04.04.25 - Added customize tab
+
+05.04.25 - Added custom logo in start
+
+05.04.25 - Adeed vim hotkeys
