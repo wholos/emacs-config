@@ -10,7 +10,14 @@ My config has plugins for convenient work with C, C++, Rust, Asm and... RPC to D
 How to install:
 ``` emacs-lisp
 git clone https://github.com/wholos/emacs-config
-copy init.el and paste to /.emacs.d/
+cd emacs-config/
+cp init.el /.emacs.d/
+cd ./emacs.d/
+mkdir themes
+cd
+cd emacs-config/themes/
+cp emacs.txt /.emacd.d/themes/
+----------------------
 start emacs
 press Alt-X
 wrote "list-packages"
