@@ -23,13 +23,17 @@
 ;; Startup dashboard
 (use-package dashboard
   :ensure t
+  :custom
+  (dashboard-startup-banner (concat user-emacs-directory "themes/emacs.txt"))
   :config
   (dashboard-setup-startup-hook))
+  (put 'upcase-region 'disabled nil)
+  (put 'downcase-region 'disabled nil) 
 ;; Line config
 (use-package doom-modeline
   :ensure t
   :init (doom-modeline-mode 1)
-  :custom ((doom-modeline-height 15)))
+  :custom ((doom-modeline-height 10)))
 ;; Customize tabs
 (use-package centaur-tabs
   :demand
@@ -42,6 +46,13 @@
   :bind
   ("C-<prior>" . centaur-tabs-backward)
   ("C-<next>" . centaur-tabs-forward))
+;; Like vim keys
+(use-package xah-fly-keys
+  :ensure t
+  :load-path "lisp/"
+  :config
+  (xah-fly-keys-set-layout "qwerty")
+  (xah-fly-keys 1))
 ;; Rust config
 (use-package cargo
   :ensure t)
@@ -259,7 +270,7 @@
  '(scroll-bar-mode nil)
  '(tab-width 4)
  '(tool-bar-mode nil)
- '(wakatime-api-key "YOUR  API KEY"))
+ '(wakatime-api-key "YOUR API KEY"))
   (add-to-list 'default-frame-alist '(font . "JetBrains Mono"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
