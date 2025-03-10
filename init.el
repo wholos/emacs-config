@@ -36,6 +36,7 @@
   :custom ((doom-modeline-height 10)))
 ;; Customize tabs
 (use-package centaur-tabs
+  :ensure t
   :demand
   :config
   (centaur-tabs-mode t)
