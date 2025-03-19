@@ -1,11 +1,14 @@
-(require 'elcord)
-(elcord-mode)
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 ;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
 ;; and `package-pinned-packages`. Most users will not need or want to do this.
 ;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
+;; Elcord
+(use-package elcord
+  :ensure t
+  :config
+  (elcord-mode))
 ;; Theme
 (use-package timu-spacegrey-theme
   :ensure t)
@@ -40,20 +43,13 @@
   :demand
   :config
   (centaur-tabs-mode t)
-  (setq centaur-tabs-style "rounded")
-  (setq centaur-tabs-height 15)
+  (setq centaur-tabs-style "box")
+  (setq centaur-tabs-height 5)
   (setq centaur-tabs-set-icons t)
   (setq centaur-tabs-icon-type 'all-the-icons)
   :bind
   ("C-<prior>" . centaur-tabs-backward)
   ("C-<next>" . centaur-tabs-forward))
-;; Like vim keys
-(use-package xah-fly-keys
-  :ensure t
-  :load-path "lisp/"
-  :config
-  (xah-fly-keys-set-layout "qwerty")
-  (xah-fly-keys 1))
 ;; Rust config
 (use-package cargo
   :ensure t)
