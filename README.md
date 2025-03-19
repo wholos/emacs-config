@@ -16,14 +16,7 @@ cd ./emacs.d/
 mkdir themes
 cd
 cd emacs-config/themes/
-cp emacs.txt /.emacd.d/themes/
-----------------------
-start emacs
-press Alt-X
-wrote "list-packages"
-install use-package, elcord
-restart emacs
-finished!!!
+cp emacs.txt /home/"WRITE YOUR USER"/.emacd.d/themes/
 ```
 UPD:
 07.03.25 - Changed family font
